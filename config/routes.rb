@@ -1,4 +1,7 @@
+
 Rails.application.routes.draw do
+  mount API::Base, at: "/"
+  mount GrapeSwaggerRails::Engine, at: "/documentation"
   get 'welcome/index'
   root 'welcome#index'
   resources :reports
