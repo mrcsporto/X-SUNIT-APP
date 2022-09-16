@@ -1,0 +1,132 @@
+// Place all the styles related to the welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+body {
+    color:#ddd;
+}
+
+.navbar-brand {
+    margin-right: 2rem;
+    font-weight: 600;
+    font-size: 2rem; 
+}
+
+.navbar-inverse .navbar-brand {
+    color: rgb(244, 0, 0);
+}
+
+.navbar-inverse .navbar-brand:hover {
+    background-color: #d9534f;
+}
+
+.navbar-nav {
+    font-size: 1.5rem;
+}
+
+.navbar {
+    background-color: #161C21;
+}
+
+.content {
+    height: 100vh;
+    display: flex;
+    align-items: flex-end;
+    bottom: 0;
+    position: fixed;
+}
+
+footer {
+    text-align: left;
+}
+
+.traffic-1 img,
+.traffic-2 img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    animation-name: blinker;
+    animation-duration: 0.25s;
+    animation-timing-function: ease;
+    animation-iteration-count: 2;
+    animation-delay: 6s;
+}
+
+.traffic-1,
+.traffic-2 {
+    animation-name: blinker;
+    animation-duration: 0.25s;
+    animation-timing-function: ease;
+    animation-iteration-count: 2;
+    animation-delay: 13s;
+}
+
+@keyframes blinker {
+    0% {opacity: 0.7;}
+    25% {opacity: 0.25;}
+    50% {opacity: 0.7;}
+    75% {opacity: 0;}
+    100% {opacity: 0;}
+}
+  
+.ufo img {
+    position: absolute;
+    animation-name: ufo;
+    animation-duration: 7s;
+    animation-timing-function: ease;
+    animation-direction: reverse;
+    animation-iteration-count: 1;
+    height: 0px;
+    opacity: 0.9;
+}
+
+@keyframes ufo {
+    20%, 100% {
+    opacity: 0;
+    transform: translate(62.5rem, 0);
+    height: 100px;
+    }
+    0% {
+    opacity: 0.25;
+    left:0px; top:-31.25rem;
+    height: 9rem;
+    }
+
+    10% {
+    opacity: 0.9;
+    height: 12.5rem;
+    left:0px; top:25rem;
+    }
+}
+
+.ufo-2 img {
+    position: absolute;
+    animation-name: ufo-2;
+    animation-duration: 7s;
+    animation-timing-function: ease;
+    animation-direction: normal;
+    animation-iteration-count: 1;
+    animation-delay: 13s;
+    height: 0px;
+    opacity: 0.9;
+}
+
+@keyframes ufo-2 {
+    20%, 100% {
+    opacity: 0;
+    transform: translate(62.5rem, 0);
+    height: 100px;
+    }
+    0% {
+    opacity: 0.25;
+    left:0px; top:-31.25rem;
+    height: 9rem;
+    }
+
+    10% {
+    opacity: 0.9;
+    height: 12.5rem;
+    left:0px; top:25rem;
+    }
+}
+

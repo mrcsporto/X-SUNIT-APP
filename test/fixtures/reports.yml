@@ -1,0 +1,9 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  reporter_id: MyString
+  reported_id: MyString
+
+two:
+  reporter_id: MyString
+  reported_id: MyString

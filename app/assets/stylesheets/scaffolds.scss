@@ -1,0 +1,179 @@
+body {
+  background-color: #0E1117;
+  color: #222;
+ }
+
+body, p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px; }
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px; }
+
+a {
+  color: #fff; 
+  font-weight: bold;
+}
+
+th a {
+  color: red; 
+}
+
+th {
+  padding-bottom: 5px;
+  color: red;
+  text-align: center; 
+}
+
+td {
+  padding: 0 5px 7px;
+  color: #ccc;
+}
+
+tr {
+  text-align: center;
+}
+
+tr:hover > td {
+  color: #0E1117;
+}
+
+tr:hover > td > a {
+  color: #0E1117;
+}
+
+div.field,
+div.actions {
+  margin-bottom: 10px; }
+
+#notice {
+  color: green; }
+
+.field_with_errors .form-control {
+  border: 5px solid #d9534f;
+  border-radius: 4px;
+  color: #fff;
+}
+
+// #error_explanation {
+//   // width: 450px;
+//   // border: 2px solid red;
+//   // padding: 7px 7px 0;
+//   // margin-bottom: 20px;
+//   background-color: #f0f0f0; }
+
+// #error_explanation h2 {
+//   text-align: left;
+//   // vertical-align: middle;
+//   font-weight: bold;
+//   // padding: 5px 5px 5px 15px;
+//   font-size: 12px;
+//   // margin: -7px -7px 0;
+//   // background-color: #c00;
+//   color: #fff; }
+
+// #error_explanation ul li {
+//   font-size: 12px;
+//   list-style: square; }
+
+label {
+  display: block; }
+
+footer {
+  text-align: center;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary.focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
+  color: red;
+  background-color: #ffffff;
+  border-color: red
+}
+
+input[type="checkbox"] {
+   width: 20px;
+   height: 20px;
+}
+
+.arrow th .current {
+  padding-right: 16px;
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+.arrow th .asc {
+  background-image: image-url('up_arrow.gif');
+}
+
+.arrow th .desc {
+  background-image: image-url('down_arrow.gif');
+}
+
+.col-lg-12.table-responsive.text-nowrap {
+  border: none;
+}
+
+.pagination>.active>a {
+  color: #fff;
+  background-color: #d9534f;
+  border-color: #ccc;
+  cursor: pointer;
+}
+
+.pagination>.active>a:hover {
+  z-index: 2;
+  color: #fff;
+  background-color: #d9534f;
+  border-color: #ccc;
+  cursor: pointer;
+}
+
+.pagination>li>a, .pagination>li>span {
+  position: relative;
+  float: left;
+  padding: 6px 12px;
+  line-height: 1.42857143;
+  text-decoration: none;
+  color: #666;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  margin-left: -1px;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #d9534f;
+  border-color: #ccc
+}
+.pagination>li>a:hover, .pagination>li>span:hover, .pagination>li>a:focus, .pagination>li>span:focus {
+  color: #d9534f;
+  background-color: #eee;
+  border-color: #ddd;
+}
+
+rect.highcharts-background {
+  fill: #0E1117;
+}
+
+text.highcharts-title {
+  fill: #fff;
+  color: #fff;
+  background-color: #d9534f;
+}
+
+g.highcharts-legend {
+  visibility: hidden;
+}
+
+.abducted-legend {
+  color: #d9534f;
+  font-size: 2.5rem;
+}
+
+.survivor-legend {
+  color: #4fd97b;
+  font-size: 2.5rem;
+}
+

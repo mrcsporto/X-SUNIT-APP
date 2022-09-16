@@ -1,0 +1,47 @@
+<h1>Abductions Reports</h1>
+<br>
+  <div><span class="abducted-legend">&#9632  </span>Abducteds</div>
+  <div><span class="survivor-legend">&#9632  </span>Survivors</div>
+<div class="content-cart">
+  <div><%= abducteds_by_gender %></div>
+  <div><%= abducteds_total %></div>
+</div>
+
+<%- model_class = AbductionResult -%>
+<div class="page-header">
+
+  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+</div>
+<table class="table table-hover arrow">
+  <thead class="thead-dark">
+    <tr>
+      <th><%= "Id" %></th>
+      <th><%= "Name" %></th>
+      <th><%= "Age" %></th>
+      <th><%= "Gender" %></th>
+      <th><%= "Latitude" %></th>
+      <th><%= "Longitude" %></th>
+      <th><%= "Abducted" %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @survivors.each do |survivor| %>
+      <tr>
+        <td><%= link_to survivor.id, survivor_path(survivor) %></td>
+        <td><%= survivor.name %></td>
+        <td><%= survivor.age %></td>
+        <td><%= survivor.gender %></td>
+        <td><%= survivor.latitude %></td>
+        <td><%= survivor.longitude %></td>
+        <td><%= survivor.abducted %></td>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+
+
+
+
