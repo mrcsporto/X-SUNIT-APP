@@ -12,6 +12,9 @@ gem 'faker'
 # A Scope & Engine based, clean, powerful, customizable and sophisticated paginator for modern web app frameworks and ORMs	
 gem 'kaminari'
 
+# Vercel deploy
+gem "cowsay", "~> 0.3.0"
+
 # A gem to automate using jQuery with Rails
 gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
 

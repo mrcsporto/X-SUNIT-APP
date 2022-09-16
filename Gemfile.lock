@@ -80,6 +80,7 @@ GEM
     childprocess (4.1.0)
     commonjs (0.2.7)
     concurrent-ruby (1.1.10)
+    cowsay (0.3.0)
     crass (1.0.6)
     erubi (1.11.0)
     execjs (2.8.1)
@@ -271,6 +272,7 @@ DEPENDENCIES
   byebug
   capybara (>= 3.26)
   chartkick
+  cowsay (~> 0.3.0)
   faker
   highcharts-rails
   importmap-rails
