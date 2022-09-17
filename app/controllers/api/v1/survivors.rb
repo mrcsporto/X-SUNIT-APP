@@ -12,35 +12,22 @@ module API
 
         desc "Return a survivor"
         params do
-          requires :id, type: String, desc: "ID of the 
-            survivor"
+          requires :id, type: String, desc: "ID of the survivor"
         end
-        get ":id", root: "survivor" do
-        { survivors:  Survivor.where(id: permitted_params[:id]).first! }
-        end
-
-        desc "Report Abduction"
-        params do
-          requires :id, type: String, desc: "ID of the 
-            survivor"
-        end
-
-        post ":id", root: "survivor" do
-          { survivors:  Survivor.where(id: permitted_params[:id]).update(abducted: true) }
+          get ":id", root: "survivor" do
+          { survivors:  Survivor.where(id: permitted_params[:id]).first! }
         end
 
         desc "Update survivor Location"
         params do
-          requires :id, type: String, desc: "ID of the 
-            survivor"
+          requires :id, type: String, desc: "ID of the survivor"
+          requires :longitude, type: String, desc: "Update longitude location"
+          requires :latitude, type: String, desc: "Update latitude location"
         end
-
-        post ":id", root: "survivor" do
-          { survivors:  Survivor.where(id: permitted_params[:id]).update(:latitude) }
+          post ":id", root: "survivor" do
+            { survivors:  Survivor.where(id: permitted_params[:id]).update(longitude: permitted_params[:longitude],latitude: permitted_params[:latitude]) }
         end
-
       end
-
     end
   end
 end
