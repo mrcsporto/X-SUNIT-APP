@@ -8,10 +8,20 @@ module API
 
       add_swagger_documentation(
         api_version: "v1",
-        hide_documentation_path: true,
-        mount_path: "/api/v1/swagger_doc",
-        hide_format: true
+        doc_version: '1.0.0',
+        hide_documentation_path: false,
+        mount_path: "/api/v1/documentation",
+        hide_format: true,
+        info: {
+          title: 'X-Sunit API',
+          description: 'Grape Api to Survivors from apocalypse',
+          contact_name: "Marcos Porto",
+          contact_email: "mrcsporto@gmail.com",
+          contact_url: "https://github.com/mrcsporto",
+        },
       )
     end
   end
 end
+
+# http://localhost:3000/api/v1/documentation
