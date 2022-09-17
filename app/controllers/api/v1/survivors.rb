@@ -24,7 +24,7 @@ module API
           requires :longitude, type: String, desc: "Update longitude location"
           requires :latitude, type: String, desc: "Update latitude location"
         end
-          post ":id", root: "survivor" do
+          put ":id", root: "survivor" do
             { survivors:  Survivor.where(id: permitted_params[:id]).update(longitude: permitted_params[:longitude],latitude: permitted_params[:latitude]) }
         end
       end
