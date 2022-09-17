@@ -21,6 +21,21 @@ gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
 # Create beautiful JavaScript charts with one line of Ruby
 gem 'chartkick'
 
+# Framework for creating REST-like APIs in Ruby.
+gem 'grape'
+
+# Autogenerates Swagger-compliant documentation for your Grape API.
+gem 'grape-swagger'
+
+# Swagger UI as Rails Engine for grape-swagger gem
+gem 'grape-swagger-rails'
+
+# User active_model_serializers with Grape
+gem 'grape-active_model_serializers'
+
+# gem provides Rack CORS Middleware to our Rails app, allowing it to support cross-origin resource sharing.
+gem 'rack-cors', :require => 'rack/cors'
+
 # Gem that includes Highcharts (Interactive JavaScript charts for your web projects), in the Rails Asset Pipeline introduced in Rails 3.1
 gem 'highcharts-rails'
 
