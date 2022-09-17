@@ -4,7 +4,7 @@ module API
   module V1
     class Base < Grape::API
       mount API::V1::Survivors
-      # mount API::V1::AnotherResource
+      mount API::V1::Reports
 
       add_swagger_documentation(
         api_version: "v1",
@@ -17,7 +17,7 @@ module API
           description: 'Grape Api to Survivors from apocalypse',
           contact_name: "Marcos Porto",
           contact_email: "mrcsporto@gmail.com",
-          contact_url: "https://github.com/mrcsporto",
+          contact_url: "https://github.com/mrcsporto/X-SUNIT-APP",
         },
       )
     end
