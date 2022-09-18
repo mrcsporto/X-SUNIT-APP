@@ -1,5 +1,4 @@
 class Survivor < ApplicationRecord
-    paginates_per 20
     validates :name, :age, :gender, :latitude, :longitude, presence: true
     validates :age, numericality: {greater_than: 0 }
     validates :latitude, :longitude, numericality: true
