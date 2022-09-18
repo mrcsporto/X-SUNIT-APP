@@ -1,5 +1,5 @@
-class AbductionsController < ApplicationController
-  include AbductionsHelper
+class AbductionresultsController < ApplicationController
+  include AbductionresultsHelper
 
   def index
     @survivors = Survivor.all

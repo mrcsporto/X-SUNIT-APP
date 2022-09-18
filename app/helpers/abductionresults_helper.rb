@@ -1,4 +1,4 @@
-module AbductionsHelper
+module AbductionresultsHelper
   def abducteds_by_gender
     column_chart Survivor.group(:abducted, :gender).size, stacked: true, height: '60rem', colors: ['#4fd97b','#d9534f'],
     library: {
