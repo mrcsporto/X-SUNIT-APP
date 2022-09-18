@@ -18,6 +18,14 @@ module API
           { survivors:  Survivor.where(id: permitted_params[:id]).first! }
         end
 
+        desc "Delete a survivor"
+        params do
+          requires :id, type: String, desc: "ID of the survivor"
+        end
+          delete ":id", root: "survivor" do
+          { survivors:  Survivor.destroy(permitted_params[:id]), message: "Survivor deleted with success"}
+        end
+
         desc "Update survivor Location"
         params do
           requires :id, type: String, desc: "ID of the survivor"
