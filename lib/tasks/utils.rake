@@ -30,7 +30,7 @@ namespace :utils do
           reported_name = Survivor.find(reported_id).name
           report = "#{reporter_id} - #{reported_id} - #{reported_name}"
           puts report
-          Report.create(reporter_id: reporter_id, reported_id:reported_id, reported_name:reported_name)
+          Report.create(reporter_id: reporter_id, reported_id: reported_id, reported_name: reported_name)
       end
     else
       puts "This rake task is only available in development environment"
