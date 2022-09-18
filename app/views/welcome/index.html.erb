@@ -1,17 +1,27 @@
-    <div class="ufo">
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= content_for?(:title) ? yield(:title) : "X-SUNIT" %></title>
+    </head>
+        <body>
+        <div class="ufo">
         <%= image_tag "ufo.png" %>
-    
-    </div>
-    <div class="ufo-2">
-        <%= image_tag "ufo_2.png" %>
-    </div>
 
-    
-    <div class="content">
-        <div class="traffic-1">
-        <%= image_tag "traffic.png" %>
         </div>
-            <div class="traffic-2">
-        <%= image_tag "traffic-2.png" %>
+            <div class="ufo-2">
+            <%= image_tag "ufo_2.png" %>
         </div>
-    </div>
+
+        <div class="content">
+            <div class="traffic-1">
+                <%= image_tag "traffic.png" %>
+            </div>
+        <div class="traffic-2">
+                <%= image_tag "traffic-2.png" %>
+            </div>
+        </div>
+  </body>
+</html>
