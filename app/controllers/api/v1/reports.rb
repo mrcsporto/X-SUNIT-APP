@@ -26,7 +26,7 @@ module API
         end
 
         post "", root: "report" do          
-         { reports: Report.create(reported_id: permitted_params[:reported_id], reporter_id: permitted_params[:reporter_id]) }               
+         { reports: Report.create(reported_id: permitted_params[:reported_id], reporter_id: permitted_params[:reporter_id]), message: "New abduction reported" }               
         end
       end
     end
