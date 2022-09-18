@@ -25,8 +25,8 @@ module API
           requires :reported_id, type: String, desc: "ID of the reported"
         end
 
-        post "", root: "report" do
-         { reports: Report.new(reported_id: permitted_params[:reported_id], reporter_id: permitted_params[:reporter_id]) }               
+        post "", root: "report" do          
+         { reports: Report.create(reported_id: permitted_params[:reported_id], reporter_id: permitted_params[:reporter_id]) }               
         end
       end
     end
