@@ -1,7 +1,7 @@
 # X-SUNIT APP
 
 API Documentation
-[(https://http://localhost:3000/documentation)]
+(https://http://localhost:3000/documentation)
 
 ### Setup Versions
 
