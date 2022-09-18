@@ -6,11 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Survivor.delete_all
-Report.delete_all
-
-250.times do 
-  Survivor.create ({
+10.times do 
     survivor_name = Faker::Name.name
     survivor_age = Faker::Number.between(from: 1, to: 95)
     survivor_gender = Faker::Gender.binary_type
@@ -19,17 +15,14 @@ Report.delete_all
     survivor = "#{survivor_name} - #{survivor_age} - #{survivor_gender} - #{survivor_latitude} - #{survivor_latitude}"
     puts survivor
     Survivor.create(name: survivor_name, age: survivor_age, gender: survivor_gender, latitude: survivor_latitude, longitude:survivor_longitude)
-  })
 end
 
-250.times do |r|
-  Report.create({
+10.times do 
     survivor_id = Survivor.select(:id)
     reporter_id = survivor_id.sample.id
     reported_id = survivor_id.sample.id
     reported_name = Survivor.find(reported_id).name
     report = "#{reporter_id} - #{reported_id} - #{reported_name}"
     puts report
-    Report.create(reporter_id: reporter_id, reported_id:reported_id, reported_name:reported_name)
-  })
+    Report.create(reporter_id: reporter_id, reported_id: reported_id, reported_name: reported_name)
 end
