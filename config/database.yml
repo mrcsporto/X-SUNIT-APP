@@ -81,6 +81,6 @@ test:
 #
 production:
   <<: *default
-  database:  <%= ENV['DATABASE_URL'] %>
+  database:  <%= ENV['XSUNIT_API_DATABASE_URL'] %>
   # username: xsunit_api
   # password: <%= ENV['XSUNIT_API_DATABASE_PASSWORD'] %>
