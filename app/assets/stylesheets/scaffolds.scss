@@ -147,6 +147,11 @@ input[type="checkbox"] {
   background-color: #d9534f;
   border-color: #ccc
 }
+
+a.btn.btn-primary {
+  margin-bottom: 5rem;
+}
+
 .pagination>li>a:hover, .pagination>li>span:hover, .pagination>li>a:focus, .pagination>li>span:focus {
   color: #d9534f;
   background-color: #eee;
