@@ -7,7 +7,7 @@ class SurvivorsController < ApplicationController
     @survivors = Survivor.order(sort_column + " " + sort_direction)
       respond_to do |format|
         format.html { @survivors = @survivors.page(params[:page]) }
-        format.json { @survivors = @survivors.page(params[:page]) }
+        format.json { @survivors = @survivors.page(params[:page]).per(@survivors.count) }
         format.csv { send_data @survivors.to_csv, filename: "survivors-#{DateTime.now.strftime("%d_%m_%Y%")}.csv"}
       end
   end

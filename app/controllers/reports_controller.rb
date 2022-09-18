@@ -7,7 +7,7 @@ class ReportsController < ApplicationController
       @reports = Report.order(sort_column + " " + sort_direction)
       respond_to do |format|
         format.html { @reports = @reports.page(params[:page]) }
-        format.json { @reports = @reports.page(params[:page]) }
+        format.json { @reports = @reports.page(params[:page]).per(@reports.count) }
         format.csv { send_data @reports.to_csv, filename: "reports-#{DateTime.now.strftime("%d_%m_%Y%")}.csv"}
      end
   end

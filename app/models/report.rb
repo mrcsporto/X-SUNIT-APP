@@ -1,5 +1,4 @@
 class Report < ApplicationRecord
-	paginates_per 20
 	validates 	:reporter_id, :reported_id, numericality: {less_than_or_equal_to: Survivor.last.id },presence: true
 	before_validation :check_reporter_and_reported
 	before_save :survivor_reports
