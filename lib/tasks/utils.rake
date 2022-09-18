@@ -2,8 +2,9 @@ namespace :utils do
   desc "Populate the survivors table with survivor's quantity (specify quantity w/ QTD=n)"
   task setup_survivors: :environment do
     Rake::Task["db:reset"].invoke
-      Survivor.delete_all
-      ENV['QTD'].to_i.times do |i|
+    if Rails.env.development?
+    Survivor.delete_all
+    ENV['QTD'].to_i.times do |i|
           survivor_name = Faker::Name.name
           survivor_age = Faker::Number.between(from: 1, to: 95)
           survivor_gender = Faker::Gender.binary_type
@@ -13,9 +14,14 @@ namespace :utils do
           puts survivor
           Survivor.create(name: survivor_name, age: survivor_age, gender: survivor_gender, latitude: survivor_latitude, longitude:survivor_longitude)
       end
+    else
+      puts "This rake task is only available in development environment"
+    end
+  end
 
   desc "Populate the import database with the number of abductions reported (specify quantity w/ QTD=n)"
   task setup_reports: :environment do
+    if Rails.env.development?
     Report.delete_all
     ENV['QTD'].to_i.times do |r|
           survivor_id = Survivor.select(:id)
@@ -26,5 +32,8 @@ namespace :utils do
           puts report
           Report.create(reporter_id: reporter_id, reported_id:reported_id, reported_name:reported_name)
       end
+    else
+      puts "This rake task is only available in development environment"
+    end
   end
 end
