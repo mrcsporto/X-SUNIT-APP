@@ -22,8 +22,11 @@ $ rails utils:setup_survivors QTD=n  # Populate database with survivors (specify
 $ rails utils:setup_reports QTD=n  # Populate database with abductions reports (specify quantity w/ QTD=n)
 ```
 ### Features
-
-- Sortable Tables
-- Pagination
-- Graphic Charts
+```sh
+- Sortable Tables by Column (ASC and DESC)
+- Pagination per page (25 items)
+- Graphic Charts with Reports
 - Fully responsive
+- Download CSV file in Survivors and Records pages
+- JSON rendering on each path (Ex.: GET /survivors.json)
+```
