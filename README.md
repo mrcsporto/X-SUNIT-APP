@@ -30,5 +30,5 @@ $ rails utils:setup_reports QTD=n  # Populate database with abductions reports (
 - Graphic Charts with Reports
 - Fully responsive
 - Download CSV file
-- JSON rendering on each path (Ex.: GET /survivors.json)
+- JSON/HTML rendering
 ```
