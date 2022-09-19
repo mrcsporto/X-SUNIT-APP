@@ -24,4 +24,3 @@ module API
   end
 end
 
-# http://localhost:3000/api/v1/documentation
