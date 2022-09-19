@@ -1,10 +1,6 @@
 # X-SUNIT APP
 
-API Documentation
-(http://localhost:3000/documentation)
-
 ### Setup Versions
-
 * Ruby version: 3.0.4
 * Rails version: 6.1.7
 
@@ -21,12 +17,18 @@ $ rails db:migrate
 $ rails utils:setup_survivors QTD=n  # Populate database with survivors (specify quantity w/ QTD=n)
 $ rails utils:setup_reports QTD=n  # Populate database with abductions reports (specify quantity w/ QTD=n)
 ```
+[API Documentation](https://x-sunit-api.herokuapp.com/documentation)
+##### Type on input field to see documentation
+```sh
+$ https://x-sunit-api.herokuapp.com/api/v1/documentation
+```
+
 ### Features
 ```sh
 - Sortable Tables by Column (ASC and DESC)
 - Pagination per page (25 items)
 - Graphic Charts with Reports
 - Fully responsive
-- Download CSV file in Survivors and Records pages
+- Download CSV file
 - JSON rendering on each path (Ex.: GET /survivors.json)
 ```
