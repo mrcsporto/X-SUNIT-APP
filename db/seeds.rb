@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Survivor.delete_all
-10.times do 
+100.times do 
     survivor_name = Faker::Name.name
     survivor_age = Faker::Number.between(from: 1, to: 95)
     survivor_gender = Faker::Gender.binary_type
@@ -19,7 +19,7 @@ Survivor.delete_all
 end
 
 Report.delete_all
-10.times do 
+200.times do 
     survivor_id = Survivor.select(:id)
     reporter_id = survivor_id.sample.id
     reported_id = survivor_id.sample.id
