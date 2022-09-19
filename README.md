@@ -19,8 +19,9 @@ $ rails utils:setup_reports QTD=n  # Populate database with abductions reports (
 ```
 
 ##### Type on input field to see [API Documentation](https://x-sunit-api.herokuapp.com/documentation)
-> https://x-sunit-api.herokuapp.com/api/v1/documentation
-
+```sh
+- https://x-sunit-api.herokuapp.com/api/v1/
+```
 
 ### Features
 ```sh
