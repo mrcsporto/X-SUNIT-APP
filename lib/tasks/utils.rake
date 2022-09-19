@@ -1,9 +1,9 @@
 namespace :utils do
   desc "Populate the survivors table with survivor's quantity (specify quantity w/ QTD=n)"
   task setup_survivors: :environment do
-    Rake::Task["db:reset"].invoke
+    # Rake::Task["db:reset"].invoke
     # if Rails.env.development?
-    Survivor.delete_all
+    # Survivor.delete_all
     ENV['QTD'].to_i.times do |i|
           survivor_name = Faker::Name.name
           survivor_age = Faker::Number.between(from: 1, to: 95)
@@ -22,7 +22,7 @@ namespace :utils do
   desc "Populate the import database with the number of abductions reported (specify quantity w/ QTD=n)"
   task setup_reports: :environment do
     # if Rails.env.development?
-    Report.delete_all
+    # Report.delete_all
     ENV['QTD'].to_i.times do |r|
           survivor_id = Survivor.select(:id)
           reporter_id = survivor_id.sample.id
