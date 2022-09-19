@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+Survivor.delete_all
 10.times do 
     survivor_name = Faker::Name.name
     survivor_age = Faker::Number.between(from: 1, to: 95)
@@ -17,6 +18,7 @@
     Survivor.create(name: survivor_name, age: survivor_age, gender: survivor_gender, latitude: survivor_latitude, longitude:survivor_longitude)
 end
 
+Report.delete_all
 10.times do 
     survivor_id = Survivor.select(:id)
     reporter_id = survivor_id.sample.id
