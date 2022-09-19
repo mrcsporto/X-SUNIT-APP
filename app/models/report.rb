@@ -1,5 +1,5 @@
 class Report < ApplicationRecord
-	validates 	:reporter_id, :reported_id, numericality: {less_than_or_equal_to: Survivor.last.id },presence: true
+	validates 	:reporter_id, :reported_id, numericality: {less_than_or_equal_to: Survivor.last.id}, presence: true
 	before_validation :check_reporter_and_reported
 	before_save :survivor_reports
 	after_save :update_survivors_name
@@ -18,7 +18,7 @@ class Report < ApplicationRecord
 	end
 
 	def check_reporter_and_reported
-		errors.add(:reporter_id, "can't be the same as Reported ID") if reporter_id === reported_id
+		errors.add(:reporter_id, "can't be the same as Reported") if reporter_id === reported_id
 	end
 
 	def self.to_csv()
