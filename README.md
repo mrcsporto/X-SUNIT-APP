@@ -18,7 +18,7 @@ $ rails utils:setup_survivors QTD=n  # Populate database with survivors (specify
 $ rails utils:setup_reports QTD=n  # Populate database with abductions reports (specify quantity w/ QTD=n)
 ```
 
-##### Type on input field to see [API Documentation](https://x-sunit-api.herokuapp.com/documentation)
+##### Type on input field to check [API Documentation](https://x-sunit-api.herokuapp.com/documentation)
 ```sh
 https://x-sunit-api.herokuapp.com/api/v1/documentation
 ```
