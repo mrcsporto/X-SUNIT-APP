@@ -26,9 +26,9 @@ $ rails utils:setup_reports QTD=n  # Populate database with abductions reports (
 ### Features
 ```sh
 - Sortable Tables by Column (ASC and DESC)
-- Pagination per page (25 items)
-- Graphic Charts with Reports
+- Pagination
+- Graphic Charts
 - Fully responsive
-- Download CSV file
+- CSV file download
 - JSON/HTML rendering
 ```
