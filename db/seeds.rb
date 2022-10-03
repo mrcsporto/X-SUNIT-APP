@@ -20,11 +20,6 @@ end
 
 Report.delete_all
 200.times do 
-    survivor_id = Survivor.select(:id)
-    reporter_id = survivor_id.sample.id
-    reported_id = survivor_id.sample.id
-    reported_name = Survivor.find(reported_id).name
-    report = "#{reporter_id} - #{reported_id} - #{reported_name}"
-    puts report
-    Report.create(reporter_id: reporter_id, reported_id: reported_id, reported_name: reported_name)
+    report = Report.create(reporter: Survivor.all.sample, reported: Survivor.all.sample )
+    puts "#{report.id} - #{report.reporter.name} - #{report.reported.name}"
 end

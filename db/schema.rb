@@ -30,7 +30,6 @@ ActiveRecord::Schema.define(version: 2022_09_13_231846) do
     t.integer "reported_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "reported_name"
   end
 
   create_table "survivors", force: :cascade do |t|

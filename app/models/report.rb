@@ -2,7 +2,8 @@ class Report < ApplicationRecord
 	validates 	:reporter_id, :reported_id, numericality: {less_than_or_equal_to: Survivor.last.id}, presence: true
 	before_validation :check_reporter_and_reported
 	before_save :survivor_reports
-	after_save :update_survivors_name
+	belongs_to	:reported, class_name: "Survivor", foreign_key: :reported_id
+	belongs_to	:reporter, class_name: "Survivor", foreign_key: :reporter_id
 	
 	def survivor_reports
 		survivor_id = Survivor.find(reported_id)
@@ -10,11 +11,6 @@ class Report < ApplicationRecord
 		if reports_count >= 2
 			survivor_id.update(abducted: true)
 		end
-	end
-
-	def update_survivors_name
-		reported_name = Survivor.find(reported_id).name
-		self.update_column(:reported_name, reported_name)
 	end
 
 	def check_reporter_and_reported
