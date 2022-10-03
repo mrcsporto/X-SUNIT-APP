@@ -18,14 +18,14 @@
   <div class="form-group">
     <%= f.label :reporter_id, :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
-      <%= f.number_field :reporter_id, :class => 'form-control' %>
+      <%= f.select :reporter_id, Survivor.all.pluck(:name, :id).sort,{:include_blank => "Select"}, :class => 'form-control' %>
     </div>
     <%=f.error_span(:reporter_id) %>
   </div>
   <div class="form-group">
     <%= f.label :reported_id, :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
-      <%= f.number_field :reported_id, :class => 'form-control' %>
+      <%= f.select :reported_id, Survivor.all.pluck(:name, :id).sort, {:include_blank => "Select"}, :class => 'form-control' %>
     </div>
     <%=f.error_span(:reported_id) %>
   </div>
