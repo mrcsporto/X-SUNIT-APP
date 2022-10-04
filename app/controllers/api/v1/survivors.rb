@@ -12,28 +12,28 @@ module API
 
         desc "Return a survivor"
         params do
-          requires :id, type: String, desc: "ID of the survivor"
+          requires :id, type: Integer, desc: "ID of the survivor"
         end
           get ":id", root: "survivor" do
-          { survivors:  Survivor.where(id: permitted_params[:id]).first! }
+            Survivor.where(id: permitted_params[:id]).first!
         end
 
         desc "Delete a survivor"
         params do
-          requires :id, type: String, desc: "ID of the survivor"
+          requires :id, type: Integer, desc: "ID of the survivor"
         end
           delete ":id", root: "survivor" do
-          { survivors:  Survivor.destroy(permitted_params[:id]), message: "Survivor deleted"}
+          { survivor:  Survivor.destroy(permitted_params[:id]), message: "Survivor deleted"}
         end
 
         desc "Update survivor Location"
         params do
-          requires :id, type: String, desc: "ID of the survivor"
-          requires :longitude, type: String, desc: "Update longitude location"
-          requires :latitude, type: String, desc: "Update latitude location"
+          requires :id, type: Integer, desc: "ID of the survivor"
+          requires :longitude, type: Float, desc: "Update longitude location"
+          requires :latitude, type: Float, desc: "Update latitude location"
         end
           put ":id", root: "survivor" do
-            { survivors:  Survivor.where(id: permitted_params[:id]).update(longitude: permitted_params[:longitude],latitude: permitted_params[:latitude]), message: "Survivor location updated" }
+            { survivor:  Survivor.where(id: permitted_params[:id]).update(longitude: permitted_params[:longitude],latitude: permitted_params[:latitude]), message: "Survivor location updated" }
         end
       end
     end

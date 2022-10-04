@@ -2,7 +2,7 @@ module API
   module V1
     class Reports < Grape::API
       include API::V1::Defaults
-
+      
       resource :reports do
        
         desc "Return all reports"
@@ -10,23 +10,22 @@ module API
           { reports: Report.all }
         end
 
-        desc "Return a report"
+        desc "Return an abduction report"
         params do
-          requires :id, type: String, desc: "ID of the 
-            report"
+          requires :id, type: Integer, desc: "ID of the report"
         end
         get ":id", root: "report" do
-        { reports:  Report.where(id: permitted_params[:id]).first! }
+         Report.where(id: permitted_params[:id]).first!
         end
 
-        desc "Report Abduction"
+        desc "Report an abduction"
         params do
-          requires :reporter_id, type: String, desc: "ID of the reporter"
-          requires :reported_id, type: String, desc: "ID of the reported"
+          requires :reporter_id, type: Integer, desc: "ID of the reporter"
+          requires :reported_id, type: Integer, desc: "ID of the reported"
         end
 
         post "", root: "report" do     
-         { reports: Report.create(reported_id: permitted_params[:reported_id], reporter_id: permitted_params[:reporter_id]) }  
+         { report: Report.create(reported_id: permitted_params[:reported_id], reporter_id: permitted_params[:reporter_id]) }  
           end             
       end
     end
