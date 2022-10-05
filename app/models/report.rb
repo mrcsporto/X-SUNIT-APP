@@ -2,8 +2,8 @@ class Report < ApplicationRecord
 	validates 	:reporter_id, :reported_id, numericality: {less_than_or_equal_to: Survivor.last.id}, presence: true
 	before_validation :check_reporter_and_reported
 	before_save :survivor_reports
-	belongs_to	:reported, class_name: "Survivor", foreign_key: :reported_id
 	belongs_to	:reporter, class_name: "Survivor", foreign_key: :reporter_id
+	belongs_to	:reported, class_name: "Survivor", foreign_key: :reported_id
 	
 	def survivor_reports
 		survivor_id = Survivor.find(reported_id)
