@@ -15,7 +15,7 @@ module API
           requires :id, type: Integer, desc: "ID of the report"
         end
         get ":id", root: "report" do
-         Report.where(id: permitted_params[:id]).first!
+         Report.find(params[:id])
         end
 
         desc "Report an abduction"
