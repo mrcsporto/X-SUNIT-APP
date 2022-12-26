@@ -80,7 +80,11 @@ test:
 # for a full overview on how database connection configuration can be specified.
 #
 production:
+
   <<: *default
-  database:  <%= ENV['XSUNIT_API_DATABASE_URL'] %>
-  # username: xsunit_api
-  # password: <%= ENV['XSUNIT_API_DATABASE_PASSWORD'] %>
+  PGHOST="p.sy2dupbvtrfp3gqeihsu7cy3pu.db.postgresbridge.com"
+  PGUSER="application"
+  PGPASSWORD="WckZtSg0cGfZ4d3fEsp8pptNrFElYo9773hbHnrFKE1GzF1XK22NJNhGzLrqWzoO"
+  database: ENV['PGHOST']  
+  username: ENV['PGUSER'] 
+  password: ENV['PGPASSWORD'] 
